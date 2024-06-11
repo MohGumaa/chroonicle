@@ -1,5 +1,5 @@
 import React from "react"
-import HyperLink from "./HyperLink";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -13,11 +13,12 @@ const Hero = () => {
 					Let us handle the complexities of recruitment, so you can focus on
 					building your team and achieving your goals.
 				</p>
-				<HyperLink
+				<Link
 					href="#contact_us"
-					title="contact us and start recruitment"
-					variant="btn_green_outline uppercase"
-				/>
+					className="flexCenter gap-3 rounded-full border btn_green_outline uppercase"
+				>
+					contact us and start recruitment
+				</Link>
 			</div>
 		</section>
 	);
