@@ -7,12 +7,12 @@ const Process = () => {
   return (
 		<section
 			className="process bg-green-90 relative py-8 lg:py-12"
-			id="how_chroonicle_work"
+			id="how_chronicle_work"
 		>
 			<div className="max-container padding-container">
 				<Title
 					title="How does the recruitment process look like?"
-					className="text-yellow-70 text-center mb-20"
+					className="text-yellow-70 text-center mb-14 md:mb-16 lg:mb-20"
 				/>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-20">
 					{RECRUITMENT_PROCESS.map((process) => (

@@ -1,13 +1,13 @@
 import { NAV_LINKS } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
+import HyperLink from "./HyperLink";
 
 const Navbar = () => {
   return (
 		<nav className="padding-container bg-transparent fixed top-4 w-full z-30">
 			<div className="flexBetween bg-gray-40 rounded-full border py-3 px-6">
-				<Link href="/">
+				<Link href="/" className="block w-32 md:w-36 lg:w-44 h-auto">
 					<Image src="/logo.svg" alt="Logo" width={176} height={28} />
 				</Link>
 				<ul className="hidden h-full gap-12 lg:flex">
@@ -23,9 +23,19 @@ const Navbar = () => {
 					))}
 				</ul>
 				<div className="hidden lg:flexCenter">
-					<Button type="button" title="Contact Us" variant="btn_green" />
+					<HyperLink
+						href="#contact_us"
+						title="Contact Us"
+						variant="btn_green"
+					/>
 				</div>
-				<Image src="/menu.svg" alt="menu" width={32} height={32} className="inline-block cursor-pointer lg:hidden" />
+				<Image
+					src="/menu.svg"
+					alt="menu"
+					width={32}
+					height={32}
+					className="inline-block cursor-pointer lg:hidden"
+				/>
 			</div>
 		</nav>
 	);

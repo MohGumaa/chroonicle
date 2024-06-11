@@ -18,8 +18,8 @@ const OurVision = () => {
 					title="Transforming the Hiring Experience"
 					className="text-center mb-2"
 				/>
-				<p className="text-base md:text-lg text-center text-neutral-10 mb-6">
-					Chroonicle leverages the power of AI to match the right talent with
+				<p className="text-sm md:text-lg text-center text-neutral-10 mb-6">
+					Chronicle leverages the power of AI to match the right talent with
 					the right opportunity. This innovative approach revolutionizes
 					recruitment, ensuring a faster and smarter hiring process for both
 					candidates and employers.
@@ -37,7 +37,6 @@ const OurVision = () => {
 					))}
 				</div>
 			</div>
-			<div className="bg-overlay"></div>
 		</section>
 	);
 };

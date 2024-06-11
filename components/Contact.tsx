@@ -4,10 +4,13 @@ import Button from './Button';
 
 const Contact = () => {
 	return (
-		<section className="process bg-green-90 relative py-8 lg:py-12 z-30">
+		<section
+			className="process bg-green-90 relative py-8 lg:py-12 z-30"
+			id="contact_us"
+		>
 			<div className="bg-overlay bg-gray-40 rounded-tl-[50px] lg:rounded-tl-[100px]"></div>
 			<div className="max-container padding-container relative z-4">
-				<div className="flexBetween gap-x-20 gap-y-6 bg-white rounded-[50px] py-12 px-6 md:px-12">
+				<div className="flexBetween flex-col md:flex-row gap-x-12 md:gap-x-20 gap-y-6 bg-white rounded-[50px] py-12 px-6 md:px-12">
 					<div className="flex-1">
 						<h4 className="font-[700] uppercase text-yellow-70 mb-3">
 							get in touch

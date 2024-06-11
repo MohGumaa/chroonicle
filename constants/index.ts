@@ -4,25 +4,24 @@ export const NAV_LINKS = [
 	{ href: '#clients', key: 'our_clients', label: 'Our clients' },
 	{ href: '#our_vision', key: 'our_vision', label: 'Our vision' },
 	{
-		href: '#how_chroonicle_work',
-		key: 'how_chroonicle_work',
-		label: 'How Chroonicle Work?',
+		href: '#how_chronicle_work',
+		key: 'how_chronicle_work',
+		label: 'How Chronicle Work?',
 	},
 ];
 
 export const CLIENTS_LOGS = [
-	'/clients-0.png',
-	'/clients-1.svg',
-	'/clients-0.png',
-	'/clients-1.svg',
-	'/clients-0.png',
-	'/clients-1.svg',
-	'/clients-0.png',
-	'/clients-1.svg',
-	'/clients-0.png',
-	'/clients-1.svg',
-	'/clients-0.png',
-	'/clients-1.svg',
+	'/clients-3.png',
+	'/clients-4.png',
+	'/clients-6.png',
+	'/clients-7.png',
+	'/clients-8.png',
+	'/clients-9.png',
+	'/clients-10.png',
+	'/clients-11.png',
+	'/clients-2.png',
+	'/clients-5.png',
+	'/clients-12.png',
 ];
 
 export const CARDS_BOXS = [
@@ -30,14 +29,14 @@ export const CARDS_BOXS = [
 		id: 0,
 		title: 'Beyond Promises: Guaranteed Faster Hires & Perfect Fits',
 		subtitle: 'employers',
-		text: "Tired of search firms making the same empty promises? At chroonicle, we deliver. We leverage the power of data, technology, and our team's expertise to find the perfect candidates faster.  Our bi-directional fit approach ensures both you and the candidate are a perfect match, reducing turnover and maximizing results.",
+		text: "Tired of search firms making the same empty promises? At chronicle, we deliver. We leverage the power of data, technology, and our team's expertise to find the perfect candidates faster.  Our bi-directional fit approach ensures both you and the candidate are a perfect match, reducing turnover and maximizing results.",
 		img: '/img-card-0.webp',
 		cardClassName: '',
 	},
 	{
 		id: 1,
 		title:
-			'Join the Future of Executive Search: Scale Up Your Career at Chroonicle',
+			'Join the Future of Executive Search: Scale Up Your Career at Chronicle',
 		subtitle: 'RECRUITERS',
 		text: 'Leading search professionals are departing top executive search firms to join Candidate Labs, where they are completing more searches, earning higher incomes, and acquiring equity in a venture-backed company.',
 		img: '/img-card-1.webp',

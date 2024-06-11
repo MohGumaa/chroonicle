@@ -11,7 +11,7 @@ const Title = ({
 }: TitleProps) => {
 	return (
 		<h2
-			className={`font-normal text-[24px] md:text-[32px] lg:text-[44px] leading-[120%] md:leading-[140%] ${className}`}
+			className={`font-normal text-[26px] md:text-[32px] lg:text-[44px] leading-[120%] md:leading-[140%] ${className}`}
 		>
 			{title}
 		</h2>
