@@ -41,7 +41,7 @@ const CardBox = ({
 				</h3>
 				<p className="text-base md:text-lg mb-8">{text}</p>
 				<Link
-					href="#contact"
+					href="#contact_us"
 					className="btn_green rounded-full border uppercase font-[600]"
 				>
 					learn more

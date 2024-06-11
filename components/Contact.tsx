@@ -5,7 +5,7 @@ import Button from './Button';
 const Contact = () => {
 	return (
 		<section
-			className="process bg-green-90 relative py-8 lg:py-12 z-30"
+			className="process bg-green-90 relative py-8 lg:py-12 z-30 snap-center"
 			id="contact_us"
 		>
 			<div className="bg-overlay bg-gray-40 rounded-tl-[50px] lg:rounded-tl-[100px]"></div>

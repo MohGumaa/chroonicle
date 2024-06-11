@@ -6,7 +6,7 @@ import { RECRUITMENT_PROCESS } from "@/constants";
 const Process = () => {
   return (
 		<section
-			className="process bg-green-90 relative py-8 lg:py-12"
+			className="process bg-green-90 relative py-8 lg:py-12 snap-center"
 			id="how_chronicle_work"
 		>
 			<div className="max-container padding-container">

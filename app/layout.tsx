@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-		<html lang="en">
+		<html lang="en" className="scroll-smooth focus:scroll-auto snap-y">
 			<body className={lora.className}>
 				<Navbar />
 				<main className="relative bg-transparent overflow-hidden">

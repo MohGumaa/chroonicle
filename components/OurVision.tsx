@@ -6,7 +6,7 @@ import { CARDS_BOXS } from '@/constants';
 const OurVision = () => {
 	return (
 		<section
-			className="OurVision relative bg-gray-30 py-8 lg:py-12"
+			className="OurVision relative bg-gray-30 py-8 lg:py-12 snap-center"
 			id="our_vision"
 		>
 			<div className="bg-overlay bg-gray-40 rounded-tl-[50px] lg:rounded-tl-[100px]"></div>
@@ -19,8 +19,8 @@ const OurVision = () => {
 					className="text-center mb-2"
 				/>
 				<p className="text-sm md:text-lg text-center text-neutral-10 mb-6">
-					Chronicle leverages the power of AI to match the right talent with
-					the right opportunity. This innovative approach revolutionizes
+					Chronicle leverages the power of AI to match the right talent with the
+					right opportunity. This innovative approach revolutionizes
 					recruitment, ensuring a faster and smarter hiring process for both
 					candidates and employers.
 				</p>

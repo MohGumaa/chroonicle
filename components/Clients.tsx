@@ -5,10 +5,13 @@ import { CLIENTS_LOGS } from "@/constants";
 
 const Clients = () => {
   return (
-		<section className="clients bg-gray-30 py-8 lg:py-12" id="#our_clients">
+		<section
+			className="clients bg-gray-30 py-8 lg:py-12 snap-center"
+			id="#our_clients"
+		>
 			<div className="max-container padding-container">
 				<Title title="Hundreds of High-Growth Tech Companies Achieve Hiring Success with Chronicle" />
-				<div className="flexBetween flex-wrap gap-x-16 gap-y-10 py-8 mt-6">
+				<div className="flexBetween flex-wrap gap-x-16 gap-y-10 py-8 mt-0 md:mt-6">
 					{CLIENTS_LOGS.map((clinet, index) => (
 						<Image
 							key={index}
