@@ -6,17 +6,17 @@ import { RECRUITMENT_PROCESS } from "@/constants";
 const Process = () => {
   return (
 		<section
-			className="process bg-green-90 relative py-8 lg:py-12 z-30"
+			className="process bg-green-90 relative py-8 lg:py-12"
 			id="how_chroonicle_work"
 		>
-			<div className="max-container padding-container relative z-10">
+			<div className="max-container padding-container">
 				<Title
 					title="How does the recruitment process look like?"
-					className="text-yellow-70 text-center mb-12"
+					className="text-yellow-70 text-center mb-20"
 				/>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-20">
 					{RECRUITMENT_PROCESS.map((process) => (
-						<div className="flex items-center space-x-4" key={process.id}>
+						<div className="flex space-x-4" key={process.id}>
 							<div className="shrink-0">
 								<Image
 									src={process.img}
@@ -27,7 +27,7 @@ const Process = () => {
 								/>
 							</div>
 							<div>
-								<h3 className="text-xl md:text-2xl font-medium text-green-50 mb-1">
+								<h3 className="text-xl md:text-2xl font-medium text-green-70 mb-1">
 									{process.title}
 								</h3>
 								<p className="text-white text-base">{process.text}</p>

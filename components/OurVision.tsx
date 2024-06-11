@@ -10,7 +10,7 @@ const OurVision = () => {
 			id="our_vision"
 		>
 			<div className="bg-overlay bg-gray-40 rounded-tl-[50px] lg:rounded-tl-[100px]"></div>
-			<div className="max-container padding-container relative z-10">
+			<div className="max-container padding-container relative z-2">
 				<p className="text-green-50 font-bold uppercase text-center mb-4">
 					our vision
 				</p>
@@ -37,6 +37,7 @@ const OurVision = () => {
 					))}
 				</div>
 			</div>
+			<div className="bg-overlay"></div>
 		</section>
 	);
 };

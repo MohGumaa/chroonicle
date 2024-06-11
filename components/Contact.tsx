@@ -4,8 +4,9 @@ import Button from './Button';
 
 const Contact = () => {
 	return (
-		<section className="process bg-gray-40 relative py-8 lg:py-12 z-30">
-			<div className="max-container padding-container">
+		<section className="process bg-green-90 relative py-8 lg:py-12 z-30">
+			<div className="bg-overlay bg-gray-40 rounded-tl-[50px] lg:rounded-tl-[100px]"></div>
+			<div className="max-container padding-container relative z-4">
 				<div className="flexBetween gap-x-20 gap-y-6 bg-white rounded-[50px] py-12 px-6 md:px-12">
 					<div className="flex-1">
 						<h4 className="font-[700] uppercase text-yellow-70 mb-3">
@@ -64,7 +65,11 @@ const Contact = () => {
 								></textarea>
 							</div>
 							<div className="w-full">
-								<Button type="button" title="Send Message" variant="btn_green w-full" />
+								<Button
+									type="button"
+									title="Send Message"
+									variant="btn_green w-full"
+								/>
 							</div>
 						</form>
 					</div>

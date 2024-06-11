@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// const inter = Inter({ subsets: ["latin"] }); className={inter.className}
+const lora = Lora({ subsets: ['latin'] }); //className={inter.className}
 
 export const metadata: Metadata = {
 	title: 'Chroonicle | A Modern Search Firm for GTM &amp; Tech Hiring',
@@ -19,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
 		<html lang="en">
-			<body>
+			<body className={lora.className}>
 				<Navbar />
-				<main className="relative bg-transparent overflow-hidden">{children}</main>
+				<main className="relative bg-transparent overflow-hidden">
+					{children}
+				</main>
 				<Footer />
 			</body>
 		</html>

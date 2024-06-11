@@ -6,7 +6,7 @@ import Button from "./Button";
 const Navbar = () => {
   return (
 		<nav className="padding-container bg-transparent fixed top-4 w-full z-30">
-			<div className="flexBetween bg-gray-40 rounded-full py-3 px-6">
+			<div className="flexBetween bg-gray-40 rounded-full border py-3 px-6">
 				<Link href="/">
 					<Image src="/logo.svg" alt="Logo" width={176} height={28} />
 				</Link>
