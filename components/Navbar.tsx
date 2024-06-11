@@ -23,11 +23,12 @@ const Navbar = () => {
 					))}
 				</ul>
 				<div className="hidden lg:flexCenter">
-					<HyperLink
+					<Link
 						href="#contact_us"
-						title="Contact Us"
-						variant="btn_green"
-					/>
+						className="flexCenter gap-3 rounded-full border btn_green font-bold"
+					>
+						Contact Us
+					</Link>
 				</div>
 				<Image
 					src="/menu.svg"
