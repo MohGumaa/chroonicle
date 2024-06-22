@@ -1,8 +1,32 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Title from './Title';
 import Button from './Button';
 
 const Contact = () => {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		phone: '',
+		message: '',
+	});
+
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		const { name, value } = e.target;
+		setFormData({
+			...formData,
+			[name]: value,
+		});
+	};
+
+	const handleSubmit = async (e: React.FormEvent) => {
+		e.preventDefault();
+		console.log(JSON.stringify(formData))
+	}
+
 	return (
 		<section
 			className="process bg-green-90 relative py-8 lg:py-12 z-30 snap-center"
@@ -16,21 +40,27 @@ const Contact = () => {
 							get in touch
 						</h4>
 						<Title
-							title="Any questions? Write us we will get back to you in 24hrs"
+							title="Ready to take your recruitment strategy to the next level?"
 							className="text-green-90 mb-5"
 						/>
 						<p className="text-base md:text-lg text-neutral-10">
-							There's a modern way to hire. Let us show you. Your premier
-							destination for finding top talent and securing your dream job
+							Chronicle is here to help. Contact us today to schedule a
+							consultation and take the first step towards building your dream
+							team.
 						</p>
 					</div>
 					<div className="flex-1">
-						<form className="flex flex-col items-start w-full">
+						<form
+							className="flex flex-col items-start w-full"
+							onSubmit={handleSubmit}
+						>
 							<div className="w-full mb-5">
 								<input
 									id="contact-name"
 									type="text"
 									name="name"
+									value={formData.name}
+									onChange={handleChange}
 									className="p-3 text-lg rounded-md w-full border bg-transparent text-black focus:outline-none"
 									placeholder="Your Name"
 									required
@@ -41,6 +71,8 @@ const Contact = () => {
 									id="contact-email"
 									type="email"
 									name="email"
+									value={formData.email}
+									onChange={handleChange}
 									className="p-3 text-lg rounded-md w-full border bg-transparent text-black focus:outline-none"
 									placeholder="Your Email"
 									required
@@ -51,6 +83,8 @@ const Contact = () => {
 									id="contact-phone"
 									type="tel"
 									name="phone"
+									value={formData.phone}
+									onChange={handleChange}
 									className="p-3 text-lg rounded-md w-full border bg-transparent text-black focus:outline-none"
 									placeholder="Your Phone"
 									required
@@ -60,6 +94,8 @@ const Contact = () => {
 								<textarea
 									id="contact-message"
 									name="message"
+									value={formData.message}
+									onChange={handleChange}
 									className="p-3 text-lg rounded-md w-full border bg-transparent text-black focus:outline-none"
 									cols={30}
 									rows={6}
@@ -69,7 +105,7 @@ const Contact = () => {
 							</div>
 							<div className="w-full">
 								<Button
-									type="button"
+									type="submit"
 									title="Send Message"
 									variant="btn_green w-full"
 								/>

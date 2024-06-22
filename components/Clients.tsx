@@ -10,7 +10,7 @@ const Clients = () => {
 			id="#our_clients"
 		>
 			<div className="max-container padding-container">
-				<Title title="Hundreds of High-Growth Tech Companies Achieve Hiring Success with Chronicle" />
+				<Title title="Hundreds of High-Growth Companies Achieve Hiring Success with Chronicle" />
 				<div className="flexBetween flex-wrap gap-x-16 gap-y-10 py-8 mt-0 md:mt-6">
 					{CLIENTS_LOGS.map((clinet, index) => (
 						<Image

@@ -15,14 +15,15 @@ const OurVision = () => {
 					our vision
 				</p>
 				<Title
-					title="Transforming the Hiring Experience"
+					title="Expert Recruitment Solutions for Ambitious Businesses"
 					className="text-center mb-2"
 				/>
 				<p className="text-sm md:text-lg text-center text-neutral-10 mb-6">
-					Chronicle leverages the power of AI to match the right talent with the
-					right opportunity. This innovative approach revolutionizes
-					recruitment, ensuring a faster and smarter hiring process for both
-					candidates and employers.
+					In today's fast-paced business environment, finding and hiring the
+					right talent is crucial for growth and success. At Chronicle, we
+					understand the importance of recruitment for ambitious businesses,
+					which is why we've helped hundreds of high-growth companies achieve
+					hiring success.
 				</p>
 				<div className="cards">
 					{CARDS_BOXS.map((card) => (
