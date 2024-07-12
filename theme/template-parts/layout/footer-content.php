@@ -8,9 +8,8 @@
  */
 
 ?>
+<?php if ( is_active_sidebar( 'footerfull' ) ) : ?>
 
-<footer id="colophon" class="bg-gray-30 text-center text-xs md:text-sm py-5">
-	<div class="container">
-		<p>All Rights Reserved 2024. chronicle is a registered trademark.</p>
-	</div>
-</footer>
+	<?php dynamic_sidebar( 'footerfull' ); ?>
+
+<?php endif; ?>

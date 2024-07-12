@@ -1,56 +1,80 @@
-/**
- * Custom styles to immediately follow Tailwind’s `components` layer
- *
- * “Add more opinionated, complex classes like buttons, form controls, alerts,
- * etc; the sort of pre-built components you often see in other frameworks that
- * you might need to override with utility classes.”
- *
- * — from https://tailwindcss.com/docs/plugins#adding-components
- */
-
-/**
- * Post title styles
- *
- * These will be applied to all headings with a `page-title` or `entry-title`
- * class on the frontend and to the post title in the block editor.
- *
- * The supplied styles are meant to match the default `h1` classes from
- * Tailwind Typography.
- */
-.page-title,
-.entry-title {
-	@apply max-w-content mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+body {
+	font-family: Inter, sans-serif;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-/**
- * Layout styles for centered content areas
- *
- * If you are controlling the width of your content area with styles applied
- * to its container, you can delete the following styles whose selectors begin
- * with `.page-content >` and `.entry-content >`. For more details, please see
- * the following:
- *
- * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
- */
-.page-content > *,
-.entry-content > * {
-	/* Content width from the `theme.json` file */
-	@apply max-w-content mx-auto;
+.flexBetween {
+	@apply flex justify-between items-center;
 }
 
-.entry-content > .alignwide {
-	/* Wide width from the `theme.json` file */
-	@apply max-w-wide;
+.flexCenter {
+	@apply flex justify-center items-center text-center;
 }
 
-.entry-content > .alignfull {
-	@apply max-w-none;
+.btn_green  { 
+	@apply  border-green-50 hover:border-green-80 bg-green-50 hover:bg-green-80 rounded-full px-6 py-2 text-white font-medium tracking-wide capitalize;
 }
 
-.entry-content > .alignleft {
-	@apply float-left mr-8;
+.btn_action  { 
+	@apply bg-neutral-20 hover:bg-green-50 outline outline-2 outline-white rounded-full text-white text-sm md:text-base lg:text-lg capitalize px-14 py-[14px];
 }
 
-.entry-content > .alignright {
-	@apply float-right ml-8;
+#primary-menu a {
+	@apply text-base font-semibold text-neutral-10 cursor-pointer transition-all hover:text-green-500;
+}
+
+.hero {
+	@apply bg-cover bg-center w-screen text-white rounded-br-[50px] lg:rounded-br-[100px];
+}
+
+.hero::after {
+  background: rgba(0,0,0, 0.6);
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}
+
+::placeholder {
+	@apply font-normal text-sm md:text-base;
+}
+
+input, textarea {
+	width: 100% !important;
+	max-width: 100% !important;
+	font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+	padding: .75rem !important;
+	height: auto !important;
+}
+
+div.wpforms-container-full button[type=submit] {
+	border-radius: 9999px !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	font-size: 1rem !important;
+	padding: 1rem 1.5rem !important;
+	height: auto !important;
+}
+
+.wpforms-container {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+.card {
+	@apply flex flex-col justify-between bg-zinc-50 border rounded-md shadow-sm h-full overflow-hidden;
+}
+
+/* BG Overlay */
+/* .bg-overlay-top::after {
+	height: calc(100% )
+} */
+
+/* .bg-overlay-bottom {
+	@apply absolute w-full h-10 left-0 bottom-10;
+} */
+
+@media(max-width: 700px) {
+  .hero::after {
+    box-shadow: inset 80px 100px 250px #000, inset -80px -100px 250px #000;
+  }
 }

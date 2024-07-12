@@ -12,6 +12,10 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				// Add Inter font family.
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
 				green: {
 					50: '#30AF5B',
@@ -43,13 +47,17 @@ module.exports = {
 		},
 		container: {
 			center: true,
+			padding: {
+				DEFAULT: '1rem',
+				sm: '0.75rem',
+				lg: '0.75rem',
+			},
 			screens: {
 				sm: '640px',
 				md: '768px',
 				lg: '1024px',
 				xl: '1280px',
 				'2xl': '1280px',
-				
 			},
 		},
 	},

@@ -190,8 +190,34 @@ add_filter( 'tiny_mce_before_init', 'chroonicle_tinymce_add_class' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/post-time.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+function phi_theme_support() {
+	remove_theme_support( 'widgets-block-editor' );
+}
+add_action( 'after_setup_theme', 'phi_theme_support' );
+
+function altered_post_time_ago_function( $time ) {
+	$post_time = get_the_time('U');
+	$current_time = current_time('timestamp');
+	
+	if ( $post_time >= strtotime('-1 day', $current_time) ) {
+		$time = sprintf( esc_html__( '%s ago', 'chroonicle' ), human_time_diff( $post_time, $current_time ) );
+	} else {
+		$time = get_the_date();
+	}
+	
+	return $time;
+}
+add_filter( 'the_time', 'altered_post_time_ago_function' );
+
+function custom_excerpt_length($length) {
+  return 50;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
