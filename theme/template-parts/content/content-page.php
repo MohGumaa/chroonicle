@@ -2,59 +2,27 @@
 /**
  * Template part for displaying pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package chroonicle
  */
 
+if (has_post_thumbnail()) {
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+} else {
+	$featured_img_url = get_template_directory_uri() . '/images/banner.webp';
+}
+
 ?>
+<article>
+	<section class="hero bg-cover bg-center bg-black snap-center relative after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:rounded-br-[50px] after:lg:rounded-br-[100px] overflow-x-hidden z-10"
+		style="background-image: url(<?php echo $featured_img_url; ?>)">
+	>
+		<div class="container flexCenter flex-1 flex-col w-full min-h-[365px] md:min-h-[470px] lg:min-h-[550px] relative z-20">
+			<?php the_title( '<h1 class="text-2xl md:text-3xl lg:text-5xl font-semibold	 capitalize">', '</h1>' ); ?>
+		</div>
+	</section>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<section class="container my-8">
+		<?php the_content(); ?>
+	</section>
 
-	<header class="entry-header">
-		<?php
-		if ( ! is_front_page() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title">', '</h2>' );
-		}
-		?>
-	</header><!-- .entry-header -->
-
-	<?php chroonicle_post_thumbnail(); ?>
-
-	<div <?php chroonicle_content_class( 'entry-content' ); ?>>
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div>' . __( 'Pages:', 'chroonicle' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers. */
-						__( 'Edit <span class="sr-only">%s</span>', 'chroonicle' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-
-</article><!-- #post-<?php the_ID(); ?> -->
+</article>

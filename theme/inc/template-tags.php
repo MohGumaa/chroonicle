@@ -258,11 +258,24 @@ if ( ! function_exists( 'chroonicle_the_posts_navigation' ) ) :
 	 * Wraps `the_posts_pagination` for use throughout the theme.
 	 */
 	function chroonicle_the_posts_navigation() {
+		global $wp_query;
+
+		$total_posts   = $wp_query->found_posts;
+		$posts_per_page = intval( get_query_var( 'posts_per_page' ) );
+		$current_page  = max( 1, get_query_var( 'paged' ) );
+		$start_post    = ( $current_page - 1 ) * $posts_per_page + 1;
+		$end_post      = min( $total_posts, $current_page * $posts_per_page );
+
+		echo '<div class="hidden md:block post-range">';
+		echo sprintf( '<p class="text-sm text-gray-700 leading-5">Showing %d to %d of %d results</p>', $start_post, $end_post, $total_posts );
+		echo '</div>';
+
 		the_posts_pagination(
 			array(
 				'mid_size'  => 2,
-				'prev_text' => __( 'Newer posts', 'chroonicle' ),
-				'next_text' => __( 'Older posts', 'chroonicle' ),
+				'prev_next' => true,
+				'prev_text' => _x( '<i>&#129128</i><span>previous</span>', 'Newer posts', 'chroonicle' ),
+				'next_text' => _x( '<span>next</span><i>&#129130</i>', 'Older posts', 'chroonicle' ),
 			)
 		);
 	}

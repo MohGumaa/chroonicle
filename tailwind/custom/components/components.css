@@ -37,7 +37,7 @@ body {
 	@apply font-normal text-sm md:text-base;
 }
 
-input, textarea {
+input:not(.search-submit), textarea {
 	width: 100% !important;
 	max-width: 100% !important;
 	font-size: 1.125rem !important;
@@ -64,14 +64,42 @@ div.wpforms-container-full button[type=submit] {
 	@apply flex flex-col justify-between bg-zinc-50 border rounded-md shadow-sm h-full overflow-hidden;
 }
 
-/* BG Overlay */
-/* .bg-overlay-top::after {
-	height: calc(100% )
-} */
+.pagination .nav-links {
+	@apply flex justify-center items-center w-full;
+}
 
-/* .bg-overlay-bottom {
-	@apply absolute w-full h-10 left-0 bottom-10;
-} */
+.pagination .page-numbers {
+	@apply mr-px rounded-md inline-flex items-center px-3 py-2 text-sm font-medium capitalize text-gray-700 bg-white leading-5 hover:text-white hover:bg-blue-500;
+}
+
+.pagination .dots {
+	@apply hover:text-gray-700 hover:bg-white
+}
+
+.pagination .prev, .pagination .next {
+	@apply gap-x-1.5 px-2 text-gray-500 hover:text-gray-400 hover:bg-white;
+}
+
+.search-form {
+	@apply flex items-stretch w-full;
+}
+
+.search-form > label {
+	@apply grow;
+}
+
+.search-field {
+	@apply py-1.5 px-3 rounded-l-md w-full border bg-transparent text-neutral-800 focus:outline-none;
+}
+
+input.search-field {
+	padding-bottom: 0.5rem !important;
+	padding-top: 0.5rem !important;
+}
+
+.search-submit, .btn-navigation {
+	@apply bg-black text-white text-sm md:text-base font-semibold border border-transparent rounded-r-md py-1.5 px-3 md:px-6 cursor-pointer hover:bg-neutral-20 focus:outline-none;
+}
 
 @media(max-width: 700px) {
   .hero::after {
