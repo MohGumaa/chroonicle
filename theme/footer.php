@@ -11,9 +11,18 @@
 
 	<?php get_template_part( 'template-parts/layout/footer', 'content' ); ?>
 
-	<footer id="colophon" class="bg-gray-30 text-center text-xs md:text-sm py-5">
-		<div class="container">
-			<p><?php esc_attr_e( 'All Rights Reserved', 'chroonicle' ); ?> <?php echo date( 'Y' ); ?>. <?php esc_attr_e( ' Chronicle is a Registered Trademark.', 'chroonicle' ); ?></p>
+	<footer id="colophon" class="bg-gray-30 py-5">
+		<div class="container flex flex-col md:flex-row gap-4 justify-between items-center">
+			<p class="text-xs md:text-sm"><?php esc_attr_e( 'All Rights Reserved', 'chroonicle' ); ?> <?php echo date( 'Y' ); ?>. <?php esc_attr_e( ' Chronicle is a Registered Trademark.', 'chroonicle' ); ?></p>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'footer-menu',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s flex flex-wrap justify-center md:justify-end gap-3" aria-label="submenu">%3$s</ul>',
+				)
+			);
+			?>
 		</div>
 	</footer>
 

@@ -19,7 +19,7 @@ $banner = get_template_directory_uri() . '/images/hero-banner.webp';
 			style="background-image: url(<?php echo $banner; ?>)">
 		>
 			<div class="container flexCenter flex-1 flex-col w-full min-h-[300px] md:min-h-[420px] lg:min-h-[470px] relative z-20">
-				<h1 class="text-2xl md:text-3xl lg:text-5xl font-semibold	tracking-wide capitalize">
+				<h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold	tracking-wide capitalize">
 					<?php esc_html_e( 'Chronicle', 'chroonicle' ); ?>
 				</h1>
 			</div>

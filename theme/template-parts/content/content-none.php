@@ -14,7 +14,7 @@
 		<?php
 			printf(
 				/* translators: 1: search result title. 2: search term. */
-				'<h1 class="text-2xl md:text-3xl text-black font-semibold mb-3">%1$s <span>%2$s</span></h1>',
+				'<h1 class="text-2xl md:text-3xl text-black font-semibold mb-3">%1$s <span class="text-green-50">%2$s</span></h1>',
 				esc_html__( 'Search results for:', 'chroonicle' ),
 				get_search_query()
 			);

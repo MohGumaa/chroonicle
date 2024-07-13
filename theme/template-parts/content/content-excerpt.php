@@ -5,9 +5,9 @@
  * @package chroonicle
  */
 
-$banner = get_template_directory_uri() . '/images/hero-banner.webp';
 $id = get_the_ID();
 [$published_time, $published_date_time, $modified_time, $modified_date_time, $is_updated] = chroonicle_post_time($id);
+$banner = get_template_directory_uri() . '/images/hero-banner.webp';
 ?>
 <article class="card">
 	<div class="shrink-0 w-full">

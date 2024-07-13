@@ -21,8 +21,11 @@ if (has_post_thumbnail()) {
 		</div>
 	</section>
 
-	<section class="container my-8">
-		<?php the_content(); ?>
-	</section>
+	<div class="container my-8">
+		
+		<section <?php chroonicle_content_class( 'entry-content' ); ?>>
+			<?php the_content(); ?>
+		</section>
+	</div>
 
 </article>

@@ -38,7 +38,7 @@ if ( ! defined( 'CHROONICLE_TYPOGRAPHY_CLASSES' ) ) {
 	 */
 	define(
 		'CHROONICLE_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-none prose-a:text-primary'
+		'prose prose-neutral max-w-none prose-img:rounded-xl prose-a:no-underline hover:prose-a:underline prose-a:text-blue-500 prose-headings:text-primary prose-blockquote:bg-slate-50 prose-blockquote:border-coinbulletRea prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:p-8 prose-blockquote:rounded-md prose-h2:mt-6 prose-h2:mb-1.5 prose-h3:mb-1.5 js-toc-content'
 	);
 }
 
@@ -146,6 +146,7 @@ add_action( 'widgets_init', 'chroonicle_widgets_init' );
  */
 function chroonicle_scripts() {
 	wp_enqueue_style( 'chroonicle-style', get_stylesheet_uri(), array(), CHROONICLE_VERSION );
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'chroonicle-script', get_template_directory_uri() . '/js/script.min.js', array(), CHROONICLE_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -216,8 +217,21 @@ function altered_post_time_ago_function( $time ) {
 }
 add_filter( 'the_time', 'altered_post_time_ago_function' );
 
+add_filter('jpeg_quality', function($arg){return 100;});
+
 function custom_excerpt_length($length) {
-  return 50;
+  return 70;
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
+
+function my_login_logo_one() { 
+?> 
+<style type="text/css"> 
+body.login div#login h1 a {
+	background-image: url(https://chroonicle.com/wp-content/uploads/2024/07/favicon.png); 
+    border-radius: 50%;
+} 
+</style>
+<?php 
+} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );

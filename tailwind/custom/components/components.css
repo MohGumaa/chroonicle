@@ -12,7 +12,7 @@ body {
 	@apply flex justify-center items-center text-center;
 }
 
-.btn_green  { 
+.btn_green, .btn-action  { 
 	@apply  border-green-50 hover:border-green-80 bg-green-50 hover:bg-green-80 rounded-full px-6 py-2 text-white font-medium tracking-wide capitalize;
 }
 
@@ -21,7 +21,15 @@ body {
 }
 
 #primary-menu a {
-	@apply text-base font-semibold text-neutral-10 cursor-pointer transition-all hover:text-green-500;
+	@apply text-sm font-semibold text-neutral-10 cursor-pointer transition-all hover:text-green-500 capitalize md:text-base;
+}
+
+#primary-menu .btn-action a {
+	@apply text-white hover:text-white active:text-white;
+}
+
+#footer-menu a {
+	@apply text-xs font-medium text-neutral-700 cursor-pointer transition-all hover:text-green-500 capitalize;
 }
 
 .hero {
@@ -99,6 +107,10 @@ input.search-field {
 
 .search-submit, .btn-navigation {
 	@apply bg-black text-white text-sm md:text-base font-semibold border border-transparent rounded-r-md py-1.5 px-3 md:px-6 cursor-pointer hover:bg-neutral-20 focus:outline-none;
+}
+
+.hide-overflow {
+	@apply overflow-hidden;
 }
 
 @media(max-width: 700px) {

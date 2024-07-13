@@ -3,10 +3,17 @@
  * Template part for displaying front page
  *
  */
+
+ if (has_post_thumbnail()) {
+	$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
+} else {
+	$featured_img_url = get_template_directory_uri() . '/images/banner.webp';
+}
+
 ?>
 
 <section class="hero bg-cover bg-center bg-black snap-center relative after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:rounded-br-[50px] after:lg:rounded-br-[100px] overflow-x-hidden z-10"
-	style="background-image: url(<?php echo get_template_directory_uri() . '/images/hero-banner.webp'; ?>)">
+	style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>)">
 >
 	<div class="container flex justify-end md:justify-center items-center text-center flex-1 flex-col w-full gap-6 min-h-[550px] md:min-h-[800px] lg:min-h-[840px] pb-14 md:pb-0 relative z-20">
 		<h1 class="text-4xl md:text-6xl lg:text-8xl font-normal capitalize">
@@ -42,7 +49,7 @@
 						loading="lazy" width="650" height="280" decoding="async" 
 						data-nimg="1" 
 						class="rounded-3xl object-cover w-full h-[280px] md:h-[360px] lg:h-[420px] shadow-2xl grayscale" 
-						src="https://chroonicle.com/img-card-0.webp"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/img-card-0.webp"
 					/>
 				</div>
 				<div class="flex-initial md:flex-1 w-full md:w-auto">
@@ -59,7 +66,7 @@
 						loading="lazy" width="650" height="280" decoding="async" 
 						data-nimg="1" 
 						class="rounded-3xl object-cover w-full h-[280px] md:h-[360px] lg:h-[420px] shadow-2xl grayscale" 
-						src="https://chroonicle.com/img-card-1.webp"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/img-card-1.webp"
 					/>
 				</div>
 				<div class="flex-initial md:flex-1 w-full md:w-auto">
@@ -80,7 +87,7 @@
 						loading="lazy" width="650" height="280" decoding="async" 
 						data-nimg="1" 
 						class="rounded-3xl object-cover w-full h-[280px] md:h-[360px] lg:h-[420px] shadow-2xl grayscale" 
-						src="https://chroonicle.com/img-card-2.webp"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/img-card-2.webp"
 					/>
 				</div>
 				<div class="flex-initial md:flex-1 w-full md:w-auto">
@@ -110,7 +117,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-0.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-0.svg"
 					/>
 				</div>
 				<div>
@@ -125,7 +132,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-1.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-1.svg"
 					/>
 				</div>
 				<div>
@@ -140,7 +147,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-2.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-2.svg"
 					/>
 				</div>
 				<div>
@@ -155,7 +162,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-4.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-3.svg"
 					/>
 				</div>
 				<div>
@@ -170,7 +177,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-4.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-4.svg"
 					/>
 				</div>
 				<div>
@@ -185,7 +192,7 @@
 					<img 
 						alt="Icon" loading="lazy" width="64" height="64" 
 						decoding="async" data-nimg="1" class="h-12 w-12" 
-						src="https://chroonicle.com/icon-5.svg"
+						src="https://chroonicle.test/wp-content/uploads/2024/07/icon-5.svg"
 					/>
 				</div>
 				<div>
@@ -215,57 +222,57 @@
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-1.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-2.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-3.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-4.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-5.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-6.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-8.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-9.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-10.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-11.svg"/>
 			</div>
 			<div>
 				<img alt="Clinet-0 Logo" 
 				loading="lazy" width="140" height="40" 
-				decoding="async" data-nimg="1" src="https://chroonicle.com/clients-0.svg"/>
+				decoding="async" data-nimg="1" src="https://chroonicle.test/wp-content/uploads/2024/07/clients-12.svg"/>
 			</div>
 		</div>
 	</div>

@@ -2,55 +2,41 @@
 /**
  * Template part for displaying single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package chroonicle
  */
 
+$featured_img_url = has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : get_template_directory_uri() . '/images/hero-banner.webp';
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article>
+  <section class="hero bg-cover bg-center bg-black snap-center relative after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:rounded-br-[50px] after:lg:rounded-br-[100px] overflow-x-hidden z-10"
+    style="background-image: url(<?php echo esc_url($featured_img_url); ?>)">
+    <div class="container flexCenter flex-1 flex-col w-full min-h-[300px] md:min-h-[420px] lg:min-h-[470px] relative z-20">
+      <?php the_title('<h1 class="text-3xl md:text-4xl lg:text-5xl font-medium capitalize tracking-wide">', '</h1>'); ?>
+    </div>
+  </section>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+  <section class="container my-8">
+    <?php if (!is_page()) : ?>
+      <div class="hidden items-center gap-1 text-sm entry-meta mb-3">
+        <?php chroonicle_entry_meta(); ?>
+      </div>
+    <?php endif; ?>
 
-		<?php if ( ! is_page() ) : ?>
-			<div class="entry-meta">
-				<?php chroonicle_entry_meta(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+    <div <?php chroonicle_content_class('entry-content'); ?>>
+      <?php
+      the_content(
+        sprintf(
+          wp_kses(
+            __('Continue reading<span class="sr-only"> "%s"</span>', 'chroonicle'),
+            ['span' => ['class' => []]]
+          ),
+          get_the_title()
+        )
+      );
+      ?>
+    </div>
+  </section>
+</article>
 
-	<?php chroonicle_post_thumbnail(); ?>
-
-	<div <?php chroonicle_content_class( 'entry-content' ); ?>>
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					__( 'Continue reading<span class="sr-only"> "%s"</span>', 'chroonicle' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div>' . __( 'Pages:', 'chroonicle' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php chroonicle_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-${ID} -->
+<?php get_template_part('template-parts/content/content', 'relatedPost'); ?>
