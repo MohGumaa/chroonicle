@@ -17,7 +17,7 @@ $banner = get_template_directory_uri() . '/images/hero-banner.webp';
 		<section class="hero bg-cover bg-center bg-black snap-center relative after:content-[''] after:absolute after:w-full after:h-full after:left-0 after:top-0 after:rounded-br-[50px] after:lg:rounded-br-[100px] overflow-x-hidden z-10"
 			style="background-image: url(<?php echo $banner; ?>)">
 		>
-			<div class="container flexCenter flex-1 flex-col w-full min-h-[300px] md:min-h-[470px] lg:min-h-[550px] relative z-20">
+			<div class="container flexCenter flex-1 flex-col w-full min-h-[300px] md:min-h-[420px] lg:min-h-[500px] relative z-20">
 				<h1 class="text-2xl md:text-3xl lg:text-5xl font-semibold	tracking-wide capitalize">
 					<?php single_cat_title(); ?>
 				</h1>
